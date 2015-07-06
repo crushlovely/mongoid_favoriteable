@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: mongoid_favoriteable
+      hosts:
+        - localhost:17017
