@@ -11,5 +11,5 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 Mongoid.load!('./spec/config/mongoid.yml', :development)
 
-RSpec.configure do |config|
-end
+# RSpec.configure do |config|
+# end

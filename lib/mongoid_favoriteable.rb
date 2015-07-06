@@ -53,6 +53,7 @@ module MongoidFavoriteable
 
       field :"favorite_#{klass}_ids", :type => Array, :default => []
       index(:"favorite_#{klass}_ids" => 1)
+
       define_method :"favorite_#{klass}!" do |favoritee|
         return if send(:"favorited_#{klass}?", favoritee)
         push(:"favorite_#{klass}_ids" => favoritee.id)

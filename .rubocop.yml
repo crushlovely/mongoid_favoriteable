@@ -1,0 +1,42 @@
+AllCops:
+  RunRailsCops: false
+
+LineLength:
+  Max: 120
+
+ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 175
+
+MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
+
+HashSyntax:
+  EnforcedStyle: hash_rockets
+
+Documentation:
+  Enabled: false
+
+DefaultScope:
+  Enabled: false
+
+CollectionMethods:
+  PreferredMethods:
+    map: 'collect'
+    map!: 'collect!'
+    reduce: 'inject'
+    find: 'detect'
+    find_all: 'select'
+
+Output:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
