@@ -1,5 +1,11 @@
 # Favoriting for Mongoid Documents
 
+[![RubyGem Version](http://img.shields.io/gem/v/mongoid_favoriteable.svg?style=flat)](https://rubygems.org/gems/mongoid_favoriteable)
+[![Dependency Status](http://img.shields.io/gemnasium/crushlovely/mongoid_favoriteable.svg?style=flat)](https://gemnasium.com/crushlovely/mongoid_favoriteable)
+[![Circle CI](https://circleci.com/gh/crushlovely/mongoid_favoriteable.svg?style=shield)](https://circleci.com/gh/crushlovely/mongoid_favoriteable)
+[![Code Climate](http://img.shields.io/codeclimate/github/crushlovely/mongoid_favoriteable.svg?style=flat)](https://codeclimate.com/github/crushlovely/mongoid_favoriteable)
+[![Code Coverage](http://img.shields.io/codeclimate/coverage/github/crushlovely/mongoid_favoriteable.svg?style=flat)](https://codeclimate.com/github/crushlovely/mongoid_favoriteable)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -53,7 +59,15 @@ favoriteable :city, :class_name => Location::City
 
 ## Module Methods
 
-By declaring the `favoriteable` functionality, a few methods are provided to handle favoriting. Let's say we've designated the `Food` class as favoriteable
+By declaring the `favoriteable` functionality, a few dynamically generated methods are provided to handle favoriting. The class supplied to the module designates the method names:
+
+* `favorite_{klass}!`
+* `unfavorite_{klass}!`
+* `favorite_{pluralized_klass}`
+* `favorite_{klass}_ids`
+
+
+Let's say we've designated the `Food` class as favoriteable
 
 ```ruby
 favoriteable :food
